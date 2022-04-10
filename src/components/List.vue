@@ -9,15 +9,18 @@
                     <tr>
                         <th>Name</th>
                         <th class="d-none d-sm-table-cell">Description</th>
+                        <th>Console</th>
                         <th>Amount</th>
-                        <th>Actions</th>
+                        <th>Format</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="game in Games" :key="game.key">
                         <td>{{ game.name }}</td>
                         <td class="d-none d-sm-table-cell">{{ game.description }}</td>
+                        <td>{{ game.console }}</td>
                         <td>${{ game.amount }}</td>
+                        <td>{{ game.format }}</td>
                         <td>
                             <router-link :to="{name: 'edit', params: { id: game.key }}" class="btn btn-primary btn-sm px-3">
                               Edit
@@ -52,8 +55,9 @@ export default {
           key: doc.id,
           name: doc.data().name,
           description: doc.data().description,
+          console: doc.data().console,
           amount: doc.data().amount,
-          frequency: doc.data().frequency
+          format: doc.data().format
         })
       })
     })
@@ -75,13 +79,13 @@ export default {
 
 <style>
 .table thead {
-  background-color: #42B883;
-  color: #2C3D4E;
+  background-color: #d71616;
+  color: #000000;
 }
 
 .table td,.table th {
   padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(126, 126, 126);
   text-align:center;
 }
 

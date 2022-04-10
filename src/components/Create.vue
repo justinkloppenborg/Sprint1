@@ -6,34 +6,34 @@
             <form @submit.prevent="onFormSubmit">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" v-model="collectathoners.name" required>
+                    <input type="text" class="form-control" v-model="game.name" required>
                 </div>
 
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" class="form-control" v-model="collectathoners.description" required>
+                    <input type="text" class="form-control" v-model="game.description" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Description</label>
-                    <input type="text" class="form-control" v-model="collectathoners.console" required>
+                    <label>Console</label>
+                    <input type="text" class="form-control" v-model="game.console" required>
                 </div>
 
                 <div class="form-group">
                     <label>Amount</label>
-                    <input type="text" class="form-control" v-model="collectathoners.amount" required>
+                    <input type="text" class="form-control" v-model="game.amount" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Payment Frequency</label>
-                    <select id='frequency' class="form-control" v-model="collectathoners.digital" required>
+                    <label>Format</label>
+                    <select id='frequency' class="form-control" v-model="game.format" required>
                       <option value='physical'>Physical</option>
                       <option value='digital'>Digital</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" @click="addgame">
+                    <button class="btn btn-primary btn-block" @click="addGame">
                        Add Game
                     </button>
                 </div>
@@ -62,7 +62,7 @@ export default {
           this.game.description = ''
           this.game.console = ''
           this.game.amount = ''
-          this.game.frequency = ''
+          this.game.format = ''
         })
         this.error = true;
         this.errorMsg = 'Please fill out the title and description'

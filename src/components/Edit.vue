@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Description</label>
+                    <label>Console</label>
                     <input type="text" class="form-control" v-model="game.console" required>
                 </div>.
 
@@ -24,8 +24,8 @@
                 </div>
 
               <div class="form-group">
-                    <label>Payment Frequency</label>
-                    <select id='frequency' class="form-control" v-model="game.frequency">
+                    <label>Format</label>
+                    <select id='format' class="form-control" v-model="game.format">
                       <option value='physical'>Physical</option>
                       <option value='digital'>Digital</option>
                     </select>
@@ -51,7 +51,7 @@ export default {
     }
   },
   created () {
-    let dbRef = db.collection('game').doc(this.$route.params.id)
+    let dbRef = db.collection('games').doc(this.$route.params.id)
     dbRef.get().then((doc) => {
       this.game = doc.data()
     }).catch((error) => {

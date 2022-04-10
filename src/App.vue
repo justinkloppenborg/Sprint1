@@ -3,7 +3,7 @@
     <header>
         <nav class="navbar justify-content-between flex-nowrap flex-row">
           <div class="container">
-            <h1><span>Games</span>App</h1>
+            <h1><span>Collectathoners</span></h1>
               <ul class="nav navbar-nav flex-row float-right">
                 <li class="nav-item">
                   <router-link class="nav-link pr-3" to="/create">Add Game</router-link>
@@ -31,12 +31,12 @@
   font-family: 'Fira Sans', san-serif;
 
   &::selection {
-    background: transparentize(#42B883, 0.5);
-     }
+    background: transparentize(#ff0000, 0.5);
+  }
 }
 
 body {
-  background-color: #35495B;
+  background-color: #414141;
 }
 
 a {
@@ -45,17 +45,18 @@ a {
 
 header {
   display: flex;
+  
   justify-content: center;
   padding: 10px 16px;
-  background-color: #2C3D4E;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  box-shadow: 0px 0px 6px rgba(46, 46, 46, 0.1);
 
   h1 {
-    color: #FFF;
+    color: rgb(95, 95, 95);
     font-size: 28px;
 
     span {
-      color: #42B883;
+      color: #ff0000;
     }
   }
 }
